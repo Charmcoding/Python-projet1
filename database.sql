@@ -1,0 +1,9 @@
+CREATE TABLE Medecin (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nom TEXT NOT NULL,
+    specialite TEXT NOT NULL,
+    created DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+CREATE TABLE Radiologue( 
+    
+)
