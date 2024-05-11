@@ -1,0 +1,50 @@
+// Collection pour les utilisateurs
+db.createCollection("utilisateurs")
+// Collection pour les radiologues
+db.createCollection("radiologues")
+// Collection pour les médecins
+db.createCollection("medecins")
+// Collection pour les images médicales
+db.createCollection("imagesMedicales")
+// Collection pour les diagnostics
+db.createCollection("diagnostics")
+// Collection pour les patients
+db.createCollection("patients")
+// Collection pour les traitements
+db.createCollection("traitements")
+
+// Insérer des données dans la collection utilisateurs
+db.utilisateurs.insertMany([
+  { NomUtilisateur: "utilisateur1", MotDePasse: "password1", Role: "Radiologue" },
+  { NomUtilisateur: "utilisateur2", MotDePasse: "password2", Role: "Médecin" }
+])
+
+// Insérer des données dans la collection radiologues
+db.radiologues.insertMany([
+  { IDRadiologue: 1, NomUtilisateur: "radiologue1", ... }
+])
+
+// Insérer des données dans la collection médecins
+db.medecins.insertMany([
+  { IDMedecin: 1, NomUtilisateur: "medecin1", Specialite: "Cardiologue", ... }
+])
+
+// Insérer des données dans la collection imagesMedicales
+db.imagesMedicales.insertMany([
+  { IDImage: 1, IDPatient: 1, Type: "Radiographie", Taille: "10 Mo", Format: "JPEG", TailleSegmentation: "5 Mo", FormatSegmentation: "PNG", IDRadiologue: 1, IDDiagnostic: 1, ... }
+])
+
+// Insérer des données dans la collection diagnostics
+db.diagnostics.insertMany([
+  { IDDiagnostic: 1, IDMedecin: 1, IDImageMedicale: 1, Diagnostic: "Fracture du radius" }
+])
+
+// Insérer des données dans la collection patients
+db.patients.insertMany([
+  { IDPatient: 1, Nom: "Dupont", Prenom: "Jean", NumeroTelephone: "0123456789", Adresse: "123 rue de la Santé, Paris", ... }
+])
+
+// Insérer des données dans la collection traitements
+db.traitements.insertMany([
+  { IDTraitement: 1, IDPatient: 1, IDImageMedicale: 1, ... }
+])
