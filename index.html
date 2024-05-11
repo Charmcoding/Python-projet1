@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation Bar</title>
+  <link rel="stylesheet" href="Myinter.css">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1>Votre interface </h1>
+
+    <nav>
+      <ul>
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#">Segmenter </a></li>
+        <li><a href="#">patients</a></li>
+        <li><a href="#">diagnostic </a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <div class="form-container">
+        <h2>Connexion</h2>
+        <form action="login.php" method="POST">
+          <input type="text" name="username" placeholder="Nom d'utilisateur" required>
+          <input type="password" name="password" placeholder="Mot de passe" required>
+          <button type="submit">Se connecter</button>
+        </form>
+        <p>Pas encore de compte ? <a href="signup.html">S'inscrire</a></p>
+      </div>
+  </div>
+</main>
+</body>
+</html>
